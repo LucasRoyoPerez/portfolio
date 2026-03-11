@@ -16,10 +16,9 @@ export const projects = [
     longDes: "Ruteo is a comprehensive web application designed for mountain enthusiasts. It allows users to search for, explore, and upload mountain tracks. Built as my TFM (Master's Thesis) project, it focuses on delivering a rich user experience with detailed maps and route metrics. This project showcases my ability to integrate complex mapping libraries, handle user authentication, and manage a robust database of geographical data.",
     img: "/LogoRuteo.png",
     iconLists: ["/NET.png", "/C_sharp.png", "sql-logo.png"],
-    link: "https://excited-essentials-783297.framer.app/ruteo",
+    link: "https://github.com/LucasRoyoPerez/Ruteo",
     resources: [
-      { name: "Live Site", link: "https://excited-essentials-783297.framer.app/ruteo", icon: "/link.svg" },
-      { name: "GitHub Repository", link: "https://github.com", icon: "/git.svg" }
+      { name: "GitHub Repository", link: "https://github.com/LucasRoyoPerez/Ruteo", icon: "/git.svg" }
     ]
   },
   {
@@ -28,11 +27,11 @@ export const projects = [
     des: "Consists in a movil app for search information about diferents tournaments of differents sports.",
     longDes: "InfoSport is a versatile mobile application aimed at sports fans who want to stay up-to-date with various tournaments across different sports. It provides real-time updates, schedules, and detailed information about teams and players. Building this app helped me improve my skills in mobile UI/UX design, state management, and consuming third-party sports APIs.",
     img: "/infosport.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    iconLists: ["/AndroidStudio.png", "/kotlin.png", "/jetpack.png", "/node_js.webp", "/sql-logo.png","/api.png", "/js.svg", "/ts.svg"],
     link: "https://excited-essentials-783297.framer.app/infosport",
     resources: [
-      { name: "Live Site", link: "https://excited-essentials-783297.framer.app/infosport", icon: "/link.svg" },
-      { name: "GitHub Repository", link: "https://github.com", icon: "/git.svg" }
+      { name: "GitHub Repository API", link: "https://github.com/LucasRoyoPerez/Infosport_API", icon: "/git.svg" },
+      { name: "GitHub Repository Mobile App", link: "https://github.com/LucasRoyoPerez/Infosport_AppMovil", icon: "/git.svg" }
     ]
   },
   {
@@ -44,8 +43,7 @@ export const projects = [
     iconLists: ["/NET.png", "/C_sharp.png", "sql-logo.png"],
     link: "https://excited-essentials-783297.framer.app/e-commerce",
     resources: [
-      { name: "Live Site", link: "https://excited-essentials-783297.framer.app/e-commerce", icon: "/link.svg" },
-      { name: "GitHub Repository", link: "https://github.com", icon: "/git.svg" }
+      { name: "GitHub Repository", link: "https://github.com/LucasRoyoPerez/E-commerce", icon: "/git.svg" }
     ]
   },
   {
@@ -192,7 +190,7 @@ export const skills = [
     category: "Mobile development",
     items: [
       { name: "Android Studio", icon: "/AndroidStudio.png" },
-      { name: "Jetpack Compose", icon: "/jetpackCompose.png" },
+      { name: "Jetpack Compose", icon: "/jetpack.png" },
     ],
   },
    {

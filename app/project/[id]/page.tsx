@@ -54,7 +54,7 @@ export default function ProjectPage({
                 {project.resources.map((res, index) => (
                   <Link href={res.link} key={index} target="_blank" rel="noopener noreferrer">
                     <button className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#13162D] border border-white/10 hover:border-purple/50 transition duration-300">
-                      <img src={res.icon} alt={res.name} className="w-5 h-5 object-contain filter invert" />
+                      <img src={res.icon} alt={res.name} className="w-5 h-5 object-contain" />
                       <span className="text-sm md:text-base font-medium text-white">{res.name}</span>
                     </button>
                   </Link>
