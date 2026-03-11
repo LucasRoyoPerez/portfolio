@@ -4,7 +4,6 @@ import { navItems } from "@/data";
 
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
@@ -17,7 +16,6 @@ const Home = () => {
         <Hero />
         <RecentProjects />
         <Skills />
-        <Experience />
         <Footer />
       </div>
     </main>

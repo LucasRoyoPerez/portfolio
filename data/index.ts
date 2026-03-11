@@ -13,33 +13,53 @@ export const projects = [
     id: 1,
     title: "Ruteo",
     des: "A web page for search mountain tracks and upload it at your taste - My TFM Project",
+    longDes: "Ruteo is a comprehensive web application designed for mountain enthusiasts. It allows users to search for, explore, and upload mountain tracks. Built as my TFM (Master's Thesis) project, it focuses on delivering a rich user experience with detailed maps and route metrics. This project showcases my ability to integrate complex mapping libraries, handle user authentication, and manage a robust database of geographical data.",
     img: "/LogoRuteo.png",
     iconLists: ["/NET.png", "/C_sharp.png", "sql-logo.png"],
     link: "https://excited-essentials-783297.framer.app/ruteo",
+    resources: [
+      { name: "Live Site", link: "https://excited-essentials-783297.framer.app/ruteo", icon: "/link.svg" },
+      { name: "GitHub Repository", link: "https://github.com", icon: "/git.svg" }
+    ]
   },
   {
     id: 2,
     title: "InfoSport",
     des: "Consists in a movil app for search information about diferents tournaments of differents sports.",
+    longDes: "InfoSport is a versatile mobile application aimed at sports fans who want to stay up-to-date with various tournaments across different sports. It provides real-time updates, schedules, and detailed information about teams and players. Building this app helped me improve my skills in mobile UI/UX design, state management, and consuming third-party sports APIs.",
     img: "/infosport.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "https://excited-essentials-783297.framer.app/infosport",
+    resources: [
+      { name: "Live Site", link: "https://excited-essentials-783297.framer.app/infosport", icon: "/link.svg" },
+      { name: "GitHub Repository", link: "https://github.com", icon: "/git.svg" }
+    ]
   },
   {
     id: 3,
     title: "E-Commerce",
     des: "A web page i created for my ASP.Net subject final proyect and consists on a online shop web page for buy products as a client and upload and sell products as an administrator.",
+    longDes: "This E-Commerce platform was developed as a final project for my ASP.NET subject. It features a complete online shopping experience, allowing clients to browse and purchase products, while administrators have a dedicated dashboard to manage inventory, upload new products, and track sales. The project demonstrates my proficiency in building secure, scalable backend architectures with .NET and C#.",
     img: "/ecommerce.png",
     iconLists: ["/NET.png", "/C_sharp.png", "sql-logo.png"],
     link: "https://excited-essentials-783297.framer.app/e-commerce",
+    resources: [
+      { name: "Live Site", link: "https://excited-essentials-783297.framer.app/e-commerce", icon: "/link.svg" },
+      { name: "GitHub Repository", link: "https://github.com", icon: "/git.svg" }
+    ]
   },
   {
     id: 4,
     title: "Racing Game",
     des: "A 3D racing game created with Unity and C#.",
+    longDes: "A fully playable 3D racing game developed using the Unity engine and C#. It features custom physics for vehicle handling, challenging tracks, and basic AI opponents. This project allowed me to explore game development concepts such as collision detection, game loops, performance optimization, and 3D math.",
     img: "/racinggame.png",
     iconLists: ["/unity.png", "/C_sharp.png"],
     link: "/ui.apple.co",
+    resources: [
+      { name: "Play Demo", link: "https://example.com/play", icon: "/link.svg" },
+      { name: "GitHub Repository", link: "https://github.com", icon: "/git.svg" }
+    ]
   },
 ];
 
