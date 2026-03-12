@@ -104,6 +104,31 @@ export default function ProjectPage({
           </div>
         </div>
 
+        {/* Key Features Section */}
+        {project.keyFeatures && project.keyFeatures.length > 0 && (
+          <>
+            <div className="w-full h-[1px] bg-white/10 my-10" />
+            <div className="flex flex-col gap-8 w-full">
+              <h2 className="text-3xl font-bold">Key Features</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {project.keyFeatures.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col gap-3 p-6 rounded-2xl bg-[#13162D] border border-white/10 hover:border-purple/30 transition duration-300"
+                  >
+                    <h3 className="text-lg md:text-xl font-semibold text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="text-white-200 text-sm md:text-base leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
+
       </div>
     </main>
   );

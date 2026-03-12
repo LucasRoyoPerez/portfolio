@@ -1,4 +1,6 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLocationArrow, FaDownload } from "react-icons/fa6";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -44,8 +46,8 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center md:flex-row justify-center gap-10">
 
-          {/* RIGHT COLUMN: IMAGE */}
-          <div className="shrink-0 flex justify-center">
+          {/* LEFT COLUMN: IMAGE */}
+          <div className="shrink-0 flex flex-col items-center gap-5">
             <Image 
               src="/profile.png" 
               alt="Lucas Royo Profile" 
@@ -54,6 +56,48 @@ const Hero = () => {
               className="object-cover rounded-full border-4 border-white/20 shadow-xl"
               priority
             />
+
+            {/* Social Links Row */}
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.linkedin.com/in/lucas-royo-p%C3%A9rez/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white/70 hover:text-[#0A66C2] hover:bg-white/20 hover:scale-110 transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin size={20} />
+              </a>
+
+              <a
+                href="https://github.com/LucasRoyoPerez"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white/70 hover:text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
+                aria-label="GitHub"
+              >
+                <FaGithub size={20} />
+              </a>
+
+              <a
+                href="mailto:lucasroyoperez@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white/70 hover:text-[#EA4335] hover:bg-white/20 hover:scale-110 transition-all duration-300"
+                aria-label="Gmail"
+              >
+                <SiGmail size={18} />
+              </a>
+
+              <a
+                href="/Lucas_Royo_CV.pdf"
+                download
+                className="flex items-center gap-2 h-11 px-5 rounded-full bg-[#13162D] border border-white/10 hover:border-purple/50 text-white text-sm font-medium hover:scale-105 transition duration-300"
+              >
+                <FaDownload size={14} />
+                <span>Download CV</span>
+              </a>
+            </div>
           </div>
 
           {/* RIGHT COLUMN: TEXTS */}
@@ -65,7 +109,7 @@ const Hero = () => {
             />
 
             <p className="text-center md:text-left md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-              I&apos;m a web developer with a double degree in Computer Engineering and Game Design and
+              I&apos;m a full-stack developer with a double degree in Computer Engineering and Game Design and
                 Development, and a Master’s in Multiplatform Application Management and Development. <br/> <br/>
                 I have 2 years of experience in software development, participating in the design and implementation
                 of applications.
