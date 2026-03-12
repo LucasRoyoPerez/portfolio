@@ -27,7 +27,9 @@ export const projects = [
     iconLists: ["/NET.png", "/C_sharp.png", "sql-logo.png"],
     link: "https://github.com/LucasRoyoPerez/Ruteo",
     resources: [
-      { name: "GitHub Repository", link: "https://github.com/LucasRoyoPerez/Ruteo", icon: "/git.svg" }
+      { name: "GitHub Repository", link: "https://github.com/LucasRoyoPerez/Ruteo", icon: "/git.svg" },
+      { name: "TFM Presentation", link: "https://docs.google.com/presentation/d/1tW64WCtXqM0eGTymQ_I8IQ73ofKtDk_j/edit?usp=sharing&ouid=110757857491741472977&rtpof=true&sd=true", icon: "/ppt.png" },
+      { name: "TFM Document", link: "https://docs.google.com/document/d/10Od65hAZtKuEWr40tv6bopVpQ9l_b-6f/edit?usp=sharing&ouid=110757857491741472977&rtpof=true&sd=true", icon: "/doc.webp" }
     ],
     keyFeatures: [
       { title: "User Authentication System", description: "Users can create accounts and securely log in to the platform, enabling them to manage their own routes and interact with the community." },
@@ -64,7 +66,9 @@ export const projects = [
     link: "https://excited-essentials-783297.framer.app/infosport",
     resources: [
       { name: "GitHub Repository API", link: "https://github.com/LucasRoyoPerez/Infosport_API", icon: "/git.svg" },
-      { name: "GitHub Repository Mobile App", link: "https://github.com/LucasRoyoPerez/Infosport_AppMovil", icon: "/git.svg" }
+      { name: "GitHub Repository Mobile App", link: "https://github.com/LucasRoyoPerez/Infosport_AppMovil", icon: "/git.svg" },
+      { name: "TFG Presentation", link: "https://docs.google.com/presentation/d/1QQj0MyipV1z-7QaEfB7VoNF3UIx662Uf/edit?usp=sharing&ouid=110757857491741472977&rtpof=true&sd=true", icon: "/ppt.png" },
+      { name: "TFG Document", link: "https://docs.google.com/document/d/1X9YQmNL0NX_T-Mb6_xrw-sCW10vLx7QJ/edit?usp=sharing&ouid=110757857491741472977&rtpof=true&sd=true", icon: "/doc.webp" }
     ],
     keyFeatures: [
       { title: "Multi-Sport Navigation", description: "The application allows users to explore different sports and tournaments through a structured navigation system. Users can select a sport and then browse the available competitions within that category." },
