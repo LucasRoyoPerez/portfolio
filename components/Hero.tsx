@@ -6,8 +6,11 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Image from "next/image";
+import { uiText } from "@/data";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Hero = () => {
+  const { language } = useLanguage();
   return (
     <div id="about" className="pb-20 pt-36">
       {/**
@@ -95,7 +98,7 @@ const Hero = () => {
                 className="flex items-center gap-2 h-11 px-5 rounded-full bg-[#13162D] border border-white/10 hover:border-purple/50 text-white text-sm font-medium hover:scale-105 transition duration-300"
               >
                 <FaDownload size={14} />
-                <span>Download CV</span>
+                <span>{uiText.downloadCV[language]}</span>
               </a>
             </div>
           </div>
@@ -104,15 +107,12 @@ const Hero = () => {
           <div className="flex flex-col items-center md:items-start justify-center flex-1">
 
             <TextGenerateEffect
-              words="Hi! I'm Lucas Royo, welcome to my portfolio!"
+              words={uiText.heroTitle[language]}
               className="text-center text-[40px] md:text-5xl lg:text-6xl"
             />
 
-            <p className="text-center md:text-left md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-              I&apos;m a full-stack developer with a double degree in Computer Engineering and Game Design and
-                Development, and a Master’s in Multiplatform Application Management and Development. <br/> <br/>
-                I have 2 years of experience in software development, participating in the design and implementation
-                of applications.
+            <p className="text-center md:text-left md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl whitespace-pre-line">
+              {uiText.heroDescription[language]}
             </p>
 
           </div>

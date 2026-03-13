@@ -24,11 +24,11 @@ export const TextGenerateEffect = ({
         delay: stagger(0.2),
       }
     );
-  }, [scope.current]);
+  }, [scope.current, words, animate]);
 
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
+      <motion.div ref={scope} key={words}>
         {wordsArray.map((word, idx) => {
           return (
             <motion.span

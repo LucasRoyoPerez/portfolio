@@ -1,15 +1,19 @@
-import { projects } from "@/data";
+"use client";
+
+import { projects, uiText } from "@/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
 import MagicButton from "@/components/MagicButton";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ProjectPage({
   params,
 }: {
   params: { id: string };
 }) {
+  const { language } = useLanguage();
   const projectId = parseInt(params.id, 10);
   const project = projects.find((p) => p.id === projectId);
 
@@ -25,7 +29,7 @@ export default function ProjectPage({
         <div className="w-full flex justify-start">
           <Link href="/#projects">
             <MagicButton
-              title="Back to Projects"
+              title={uiText.backToProjects[language]}
               icon={<FaArrowLeft />}
               position="left"
               otherClasses="!w-auto px-6"
@@ -45,7 +49,7 @@ export default function ProjectPage({
               })}
             </h1>
             <p className="text-white-200 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
-              {project.des}
+              {project.des[language]}
             </p>
 
             {/* Resources (Links) */}
@@ -54,8 +58,8 @@ export default function ProjectPage({
                 {project.resources.map((res, index) => (
                   <Link href={res.link} key={index} target="_blank" rel="noopener noreferrer">
                     <button className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#13162D] border border-white/10 hover:border-purple/50 transition duration-300">
-                      <img src={res.icon} alt={res.name} className="w-5 h-5 object-contain" />
-                      <span className="text-sm md:text-base font-medium text-white">{res.name}</span>
+                      <img src={res.icon} alt={res.name[language]} className="w-5 h-5 object-contain" />
+                      <span className="text-sm md:text-base font-medium text-white">{res.name[language]}</span>
                     </button>
                   </Link>
                 ))}
@@ -80,9 +84,9 @@ export default function ProjectPage({
         {/* Details Section */}
         <div className="flex flex-col lg:flex-row gap-16 w-full">
           <div className="flex-[2] flex flex-col gap-6">
-            <h2 className="text-3xl font-bold">About the Project</h2>
+            <h2 className="text-3xl font-bold">{uiText.aboutTheProject[language]}</h2>
             <div className="text-white-200 text-base md:text-lg leading-relaxed space-y-4">
-              {project.longDes?.split("\n").map((par, i) => (
+              {project.longDes?.[language]?.split("\n").map((par, i) => (
                 <p key={i}>{par}</p>
               ))}
             </div>
@@ -90,7 +94,7 @@ export default function ProjectPage({
 
           {/* Technologies */}
           <div className="flex-1 flex flex-col gap-6">
-            <h2 className="text-3xl font-bold">Technologies</h2>
+            <h2 className="text-3xl font-bold">{uiText.technologies[language]}</h2>
             <div className="flex flex-wrap gap-4">
                {project.iconLists.map((icon, index) => (
                  <div
@@ -109,7 +113,7 @@ export default function ProjectPage({
           <>
             <div className="w-full h-[1px] bg-white/10 my-10" />
             <div className="flex flex-col gap-8 w-full">
-              <h2 className="text-3xl font-bold">Key Features</h2>
+              <h2 className="text-3xl font-bold">{uiText.keyFeaturesTitle[language]}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {project.keyFeatures.map((feature, index) => (
                   <div
@@ -117,10 +121,10 @@ export default function ProjectPage({
                     className="flex flex-col gap-3 p-6 rounded-2xl bg-[#13162D] border border-white/10 hover:border-purple/30 transition duration-300"
                   >
                     <h3 className="text-lg md:text-xl font-semibold text-white">
-                      {feature.title}
+                      {feature.title[language]}
                     </h3>
                     <p className="text-white-200 text-sm md:text-base leading-relaxed">
-                      {feature.description}
+                      {feature.description[language]}
                     </p>
                   </div>
                 ))}

@@ -1,13 +1,15 @@
 import React from "react";
 
-import { skills } from "@/data";
+import { skills, uiText } from "@/data";
 import { Button } from "./ui/MovingBorders";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Skills = () => {
+  const { language } = useLanguage();
   return (
     <div id="skills" className="py-20 w-full">
       <h1 className="heading">
-        My <span className="text-purple">skills</span>
+        {uiText.mySkillsHeading1[language]}<span className="text-purple">{uiText.mySkillsHeading2[language]}</span>
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
@@ -27,7 +29,7 @@ const Skills = () => {
             <div className="flex flex-col items-center p-3 py-6 md:p-5 lg:p-10 gap-6 w-full">
               {/* Category Title */}
               <h1 className="text-2xl md:text-3xl font-bold text-center w-full">
-                {category.category}
+                {category.category[language]}
               </h1>
 
               {/* Skills Grid/Flex */}

@@ -8,19 +8,21 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageContext";
 
 export const FloatingNav = ({
   navItems,
   className,
 }: {
   navItems: {
-    name: string;
+    name: { en: string; es: string };
     link: string;
     icon?: JSX.Element;
   }[];
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
+  const { language, toggleLanguage } = useLanguage();
 
   // set true for the initial state so that nav bar is visible in the hero section
   const [visible, setVisible] = useState(true);
@@ -82,14 +84,29 @@ export const FloatingNav = ({
             <span className="block sm:hidden">{navItem.icon}</span>
             {/* add !cursor-pointer */}
             {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+            <span className=" text-sm !cursor-pointer">{navItem.name[language]}</span>
           </Link>
         ))}
-        {/* remove this login btn */}
-        {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>Login</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button> */}
+        {/* Language Toggle Button */}
+        <div className="flex items-center gap-2 ml-2">
+          <span className={`text-xs md:text-sm font-medium flex items-center gap-1 transition-colors ${language === 'es' ? 'text-white' : 'text-neutral-500'}`}>
+            <img src="/spain.webp" alt="ES" className="w-4 h-3 object-cover rounded-sm" /> ES
+          </span>
+          <button
+            onClick={toggleLanguage}
+            className="relative inline-flex h-6 w-11 items-center rounded-full bg-white/20 transition-colors focus:outline-none hover:bg-white/30"
+            aria-label="Toggle Language"
+          >
+            <span
+              className={`inline-block h-4 w-4 transform rounded-full bg-white transition duration-200 ease-in-out ${
+                language === "en" ? "translate-x-6" : "translate-x-1"
+              }`}
+            />
+          </button>
+          <span className={`text-xs md:text-sm font-medium flex items-center gap-1 transition-colors ${language === 'en' ? 'text-white' : 'text-neutral-500'}`}>
+            EN <img src="/United_Kingdom.png" alt="EN" className="w-4 h-3 object-cover rounded-sm" />
+          </span>
+        </div>
       </motion.div>
     </AnimatePresence>
   );

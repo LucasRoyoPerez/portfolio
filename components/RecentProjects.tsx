@@ -2,15 +2,17 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { projects } from "@/data";
+import { projects, uiText } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import { useLanguage } from "@/context/LanguageContext";
 
 const RecentProjects = () => {
+  const { language } = useLanguage();
   return (
     <div id="projects" className="py-20 relative z-50">
       <h1 className="heading">
-        Featured{" "}
-        <span className="text-purple">projects</span>
+        {uiText.featuredProjectsHeading1[language]}
+        <span className="text-purple">{uiText.featuredProjectsHeading2[language]}</span>
       </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 p-4 mt-10">
@@ -48,7 +50,7 @@ const RecentProjects = () => {
                   margin: "1vh 0",
                 }}
               >
-                {item.des}
+                {item.des[language]}
               </p>
 
               <div className="flex items-center justify-between mt-7 mb-3">
