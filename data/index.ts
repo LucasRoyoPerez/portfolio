@@ -82,39 +82,68 @@ export const projects = [
   },
   {
     id: 3,
-    title: "E-Commerce",
-    des: "A web page i created for my ASP.Net subject final proyect and consists on a online shop web page for buy products as a client and upload and sell products as an administrator.",
-    longDes: "This E-Commerce platform was developed as a final project for my ASP.NET subject. It features a complete online shopping experience, allowing clients to browse and purchase products, while administrators have a dedicated dashboard to manage inventory, upload new products, and track sales. The project demonstrates my proficiency in building secure, scalable backend architectures with .NET and C#.",
-    img: "/ecommerce.png",
+    title: "Nevasca",
+    des: "A full-stack e-commerce platform for ski equipment featuring product browsing, filtering, and a shopping cart system. The application includes user authentication with role-based access (admin and customer) and an administration panel for managing products, categories, brands, and users. Built with ASP.NET and SQL Server using a layered architecture",
+    longDes: `This project is a fully functional e-commerce web application for ski equipment, designed to simulate a complete online store where users can browse and purchase ski-related products. The platform provides a structured shopping experience where customers can explore products, filter them based on different criteria, and manage their purchases through a shopping cart system.
+
+    The application includes a user authentication system, allowing visitors to register and log into their accounts. The system supports role-based access control, distinguishing between regular users and administrators. Regular users can browse products, manage their shopping cart, and complete purchases, while administrators have access to a dedicated management panel where they can control the store’s inventory and platform data.
+
+    From a technical perspective, the project was developed using ASP.NET and SQL Server and follows a layered architecture composed of data, entity, business logic, and presentation layers. The data layer handles communication with the database, the entity layer defines the core models of the system, and the business layer manages validation and application logic. The platform also includes two presentation environments: a customer-facing storefront and an administrative interface for managing the store.
+
+    Overall, the project demonstrates the implementation of a complete e-commerce solution, combining authentication, role management, database integration, and a structured backend architecture to create a functional and scalable online store.`,
+    img: "/Ecommerce.png",
     iconLists: ["/NET.png", "/C_sharp.png", "sql-logo.png"],
     link: "https://excited-essentials-783297.framer.app/e-commerce",
     resources: [
-      { name: "GitHub Repository", link: "https://github.com/LucasRoyoPerez/E-commerce", icon: "/git.svg" }
+      { name: "GitHub Repository", link: "https://github.com/LucasRoyoPerez/E-commerce", icon: "/git.svg" },
+      { name: "Nevasca documentation", link: "https://docs.google.com/document/d/1rdErLMxGJ7qA_M89ue0jx1wnb7B1qW9U/edit?usp=sharing&ouid=110757857491741472977&rtpof=true&sd=true", icon: "/doc.webp" }
     ],
     keyFeatures: [
-      { title: "Product Catalog", description: "Clients can browse a full catalog of products with search and filtering capabilities, viewing detailed product information including images, descriptions, and pricing." },
-      { title: "Shopping Cart & Checkout", description: "A complete shopping cart system that allows users to add products, adjust quantities, and proceed through a checkout flow to complete their purchases." },
-      { title: "Admin Dashboard", description: "Administrators have access to a dedicated management panel where they can upload new products, edit existing listings, manage inventory, and track sales performance." },
-      { title: "User Authentication & Roles", description: "The platform implements role-based access control, distinguishing between client and administrator accounts with different permissions and views." },
+      { title: "User Authentication System", description: "The platform includes a complete authentication system that allows users to register and log in securely to access the store." },
+      { title: "Role-Based Access Control", description: "The system supports two types of users: Admin users, who can access the administration panel and Regular users (customers), who can browse and purchase products" },
+      { title: "Product Catalog", description: "Users can browse a complete catalog of ski equipment products, each including detailed information such as name, description, price, and product image." },
+      { title: "Product Filtering", description: "Products can be filtered by category and brand, allowing users to quickly find items that match their preferences." },
+      { title: "Product Detail Pages", description: "Each product includes a dedicated detail page where users can view additional information before adding it to their cart." },
+      { title: "Shopping Cart System", description: "Users can add products to a cart, adjust quantities, remove items, and review their order before completing the purchase." },
+      { title: "Stock Validation", description: "The system checks product availability when modifying cart quantities and alerts the user if the requested quantity exceeds the available stock." },
+      { title: "Checkout Process", description: "Once users finish selecting products, they can proceed to checkout and finalize their purchase from the cart page." },
+      { title: "Administration Panel", description: "Administrators have access to a management dashboard where they can: Manage products (add, edit, delete), Manage categories (add, edit, delete), Manage brands (add, edit, delete) and manage users with access to the administration section" },
+      { title: "Store Overview Dashboard", description: "The admin dashboard provides quick insights into the store, such as the number of registered customers and available products." },
+      { title: "Layered Architecture", description: "The application is structured using multiple layers to ensure maintainability and scalability: Data Layer for database communication, Entity Layer for defining system models, Business Layer for implementing validation and logic, Presentation Layers for both the storefront and the administration interface" },
     ]
   },
   {
     id: 4,
-    title: "Racing Game",
-    des: "A 3D racing game created with Unity and C#.",
-    longDes: "A fully playable 3D racing game developed using the Unity engine and C#. It features custom physics for vehicle handling, challenging tracks, and basic AI opponents. This project allowed me to explore game development concepts such as collision detection, game loops, performance optimization, and 3D math.",
+    title: "Racing simulator",
+    des: "A racing simulation prototype developed in Unity featuring realistic car physics and AI-controlled opponents. The project implements custom vehicle dynamics, waypoint-based pathfinding, obstacle detection, and dynamic speed control to simulate competitive racing behavior.",
+    longDes: `This project was developed as my Final Degree Project for the Video Game Development program and focuses on the creation of a car racing simulation in Unity, with special emphasis on realistic vehicle physics and artificial intelligence for autonomous racing opponents.
+
+    The main objective of the project was to simulate the behavior of racing cars as realistically as possible while developing an AI system capable of navigating a racing circuit and competing against the player. The vehicle physics were implemented manually using Unity’s physics system, including acceleration, braking, steering, drifting, reverse movement, and aerodynamic resistance. These mechanics were developed using Wheel Colliders, allowing the vehicle to behave similarly to a real car by simulating traction, suspension, and friction forces.
+
+    In addition to the vehicle physics, the project implements an AI system capable of navigating a racing track using waypoint-based pathfinding. AI-controlled cars follow a series of nodes placed along the circuit and dynamically adjust their speed depending on the characteristics of each section of the track. This allows the vehicles to accelerate on straights and slow down appropriately when approaching tighter curves.
+
+    To increase realism and robustness, the AI also includes environment awareness through sensor systems based on raycasts, allowing vehicles to detect obstacles and react accordingly. If a vehicle becomes blocked or stuck, a recovery system enables it to reverse and reposition itself to continue the race.
+
+    Finally, the simulation was integrated into a playable racing game prototype, where the player can control a vehicle and compete against AI opponents on a racing circuit. The game includes menus and a basic user interface displaying vehicle speed and race information.
+
+    Overall, the project demonstrates the development of a complete racing simulation system, combining vehicle physics programming, artificial intelligence behavior, and gameplay systems within the Unity game engine.`,
     img: "/racinggame.png",
     iconLists: ["/unity.png", "/C_sharp.png"],
     link: "/ui.apple.co",
     resources: [
-      { name: "Play Demo", link: "https://example.com/play", icon: "/link.svg" },
-      { name: "GitHub Repository", link: "https://github.com", icon: "/git.svg" }
+      { name: "GitHub Repository", link: "https://github.com", icon: "/git.svg" },
+      { name: "TFG Document", link: "https://docs.google.com/document/d/1JNamhXazmxP8MzGSgLwejJF-fZuTggp8/edit?usp=sharing&ouid=110757857491741472977&rtpof=true&sd=true", icon: "/doc.webp" },
+      { name: "TFG Presentation", link: "https://docs.google.com/presentation/d/1VXDTh_XbEJ0SXLg0mhNJsKkpJGlTpS5A/edit?usp=sharing&ouid=110757857491741472977&rtpof=true&sd=true", icon: "/ppt.png" },
     ],
     keyFeatures: [
-      { title: "Custom Vehicle Physics", description: "The game features a custom-built physics system for realistic vehicle handling, including acceleration, braking, drifting, and suspension dynamics." },
-      { title: "AI Opponents", description: "Basic AI-controlled opponents that follow racing lines and provide competitive challenges across different difficulty levels." },
-      { title: "Track Design", description: "Multiple challenging tracks with varied terrain, turns, and elevation changes designed to test driving skills." },
-      { title: "Performance Optimization", description: "Optimized rendering and physics calculations to maintain smooth frame rates while handling complex 3D scenes with multiple vehicles." },
+      { title: "Realistic Vehicle Physics", description: "The project implements custom vehicle physics using Unity’s Wheel Collider system, simulating realistic car behavior including: Acceleration and engine torque, braking using brake torque, steering with smooth wheel rotation, drifting through traction loss simulation, reverse driving, aerodynamic drag and vehicle mass effects. These mechanics create a driving experience that resembles real vehicle dynamics." },
+      { title: "Waypoint-Based Pathfinding", description: "AI-controlled vehicles navigate the circuit using a node-based pathfinding system. Each car follows a sequence of waypoints placed along the track, allowing them to complete laps autonomously." },
+      { title: "Dynamic Speed Control", description: "AI vehicles adjust their speed based on the characteristics of each part of the track. Sections of the circuit are categorized into different speed zones (high, medium, and low speed), enabling the AI to slow down before tight curves and accelerate on straight sections." },
+      { title: "Obstacle Detection System", description: "The AI includes multiple raycast-based sensors placed at the front of the vehicle. These sensors detect obstacles and walls, allowing the AI to react and steer away to avoid collisions." },
+      { title: "Anti-Stuck Recovery System", description: "If a vehicle becomes stuck against an obstacle or wall, the system detects when the car’s speed drops below a certain threshold and automatically activates a reverse maneuver to recover and continue driving." },
+      { title: "AI Navigation and Steering Logic", description: "The steering behavior of AI vehicles is calculated by determining the direction vector toward the next waypoint and converting it into steering input, allowing the car to smoothly follow the optimal path around the track." },
+      { title: "Playable Racing Prototype", description: "The simulation was integrated into a playable prototype where the player can control a vehicle and compete against AI opponents on a racing circuit." },
+      { title: "Basic Game Interface", description: "The project includes menus and a user interface displaying information such as the vehicle’s speed during gameplay." },
     ]
   },
 ];
